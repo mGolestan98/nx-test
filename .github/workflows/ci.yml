@@ -29,7 +29,7 @@ jobs:
       # This line enables distribution
       # The "--stop-agents-after" is optional, but allows idle agents to shut down once the "e2e-ci" targets have been requested
       # - run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
-      - run: npm ci
+      - run: pnpm exec nx run-many --target test
 
       - uses: nrwl/nx-set-shas@v4
 
